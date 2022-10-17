@@ -25,7 +25,7 @@
         <h5>    - Package Name : com.toyproject.wrightwyatt</h5>
         <h5>    - Packaging    : Jar</h5>
         <h5>    - Java         : 11</h5>
-        <h5>    - Dependencies : Spring Boot DevTools, Spring Web</h5>
+        <h5>    - Dependencies : Spring Boot DevTools, Spring Web, Thymeleaf</h5>
         <h5> 5) Project Path</h5>
         <h5>    - C:\DevEnv\wrightwyatt</h5>
 </div>
