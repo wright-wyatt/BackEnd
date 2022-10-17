@@ -26,6 +26,9 @@
         <h5>    - Packaging    : Jar</h5>
         <h5>    - Java         : 11</h5>
         <h5>    - Dependencies : Spring Boot DevTools, Spring Web, Thymeleaf</h5>
+        <h5>        ㄴ Spring Boot DevTools</h5>
+        <h5>        ㄴ Spring Web</h5>
+        <h5>        ㄴ Thymeleaf(템플릿 )</h5>
         <h5> 5) Project Path</h5>
         <h5>    - C:\DevEnv\wrightwyatt</h5>
 </div>
