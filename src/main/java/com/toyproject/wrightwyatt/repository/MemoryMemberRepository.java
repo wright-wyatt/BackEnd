@@ -6,31 +6,30 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import com.toyproject.wrightwyatt.domain.Member;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long, Member> store = new HashMap<>();
-    private static long sequence = 0L;
+    private static Map<String, Member> store = new HashMap<>();
+    private long sequence = 0L;
 
     @Override
     public Member save(Member member) {
-        member.setId(++sequence);
+        member.setId(String.valueOf(member.getId()));
         store.put(member.getId(), member);
+
+        member.setPassword(String.valueOf(member.getPassword()));
+        store.put(member.getPassword(), member);
 
         return member;
     }
 
     @Override
-    public Optional<Member> findById(Long id) {
+    public Optional<Member> findById(String id) {
         return Optional.ofNullable(store.get(id));
-    }
-
-    @Override
-    public Optional<Member> findByName(String name) {
-        return store.values().stream()
-                .filter(member -> member.getName().equals(name))
-                .findAny();
     }
 
     @Override
@@ -38,4 +37,7 @@ public class MemoryMemberRepository implements MemberRepository {
         return new ArrayList<>(store.values());
     }
 
+    public void clearStore() {
+        store.clear();
+    }
 }

@@ -1,26 +1,34 @@
 package com.toyproject.wrightwyatt.domain;
 
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 public class Member {
 
-    private Long id;
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
+    @Column(name = "passward")
+    private String password;
 
-
-    
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName() {
-        return this.name;
+    public String getPassword() {
+        return this.password;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPassword(String name) {
+        this.password = password;
     }
-    
+
 }

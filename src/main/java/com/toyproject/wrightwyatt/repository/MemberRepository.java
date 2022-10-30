@@ -6,12 +6,12 @@ import java.util.Optional;
 import com.toyproject.wrightwyatt.domain.Member;
 
 public interface MemberRepository {
+    /* 회원가입 */
     Member save(Member member);
 
-    Optional<Member> findById(Long id);
+    /* ID찾기 */
+    Optional<Member> findById(String id);
 
-    Optional<Member> findByName(String name);
-
+    /* 모든 회원 리스트 출력 */
     List<Member> findAll();
-
 }
