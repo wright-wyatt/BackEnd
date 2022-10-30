@@ -9,10 +9,7 @@ import javax.persistence.GenerationType;
 
 public class Member {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-    @Column(name = "passward")
     private String password;
 
     public String getId() {
@@ -27,8 +24,6 @@ public class Member {
         return this.password;
     }
 
-    public void setPassword(String name) {
-        this.password = password;
-    }
+    public void setPassword(String password) { this.password = password; }
 
 }
